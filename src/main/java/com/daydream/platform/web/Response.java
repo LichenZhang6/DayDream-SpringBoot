@@ -1,4 +1,4 @@
-package com.daydream.platform.common;
+package com.daydream.platform.web;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -35,9 +35,9 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         return updateById(user);
     }
 
-    public boolean getById(String id) {
-        return getById(id);
-    }
+//    public boolean getById(String id) {
+//        return getById(id);
+//    }
 
     public IPage<User> page(int start, int size) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
