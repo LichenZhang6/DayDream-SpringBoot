@@ -7,15 +7,18 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-@ApiModel("user table")
-public class User implements Serializable {
+@ApiModel("item table")
+public class Item implements Serializable {
 
     @ApiModelProperty("id")
     private String id;
 
+    @ApiModelProperty("user_id")
+    private String userId;
+
     @ApiModelProperty("name")
     private String name;
 
-    @ApiModelProperty("age")
-    private int age;
+    @ApiModelProperty("price")
+    private float price;
 }
