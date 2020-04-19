@@ -5,11 +5,8 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
-@ApiModel("user modify")
-public class UserModify {
-
-    @ApiModelProperty("id")
-    private String id;
+@ApiModel("user login")
+public class UserLogin {
 
     @ApiModelProperty("username")
     private String username;

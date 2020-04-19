@@ -8,9 +8,9 @@ import lombok.Data;
 @ApiModel("user create")
 public class UserCreate {
 
-    @ApiModelProperty("name")
-    private String name;
+    @ApiModelProperty("username")
+    private String username;
 
-    @ApiModelProperty("age")
-    private int age;
+    @ApiModelProperty("password")
+    private String password;
 }

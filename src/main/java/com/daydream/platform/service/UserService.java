@@ -18,8 +18,8 @@ public class UserService extends ServiceImpl<UserMapper, User> {
     @Transactional(rollbackFor = Exception.class)
     public boolean create(UserCreate userCreate) {
         User user = new User();
-        user.setName(userCreate.getName());
-        user.setAge(userCreate.getAge());
+        user.setUsername(userCreate.getUsername());
+        user.setPassword(userCreate.getPassword());
         return save(user);
     }
 
@@ -35,9 +35,9 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         return updateById(user);
     }
 
-//    public boolean getById(String id) {
-//        return getById(id);
-//    }
+    public User getByName(String name) {
+        return baseMapper.selectOne(new QueryWrapper<User>().eq("username", name));
+    }
 
     public IPage<User> page(int start, int size) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
